@@ -1,0 +1,151 @@
+/* :root {
+  --main-color: rgb(153, 102, 7);
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  background: linear-gradient(#f4980b, #00ffd4);
+  /* background: #000; */
+  color: white;
+
+  min-height: 100vh;
+  font-size: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainParent {
+  width: 350px;
+  background: rgba(0, 0, 0, 0.603);
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: -4px 4px 5px rgb(0, 0, 0, 0.25);
+}
+
+.result {
+  border: 1px solid rgba(226, 221, 221, 0.25);
+  border-radius: 10px;
+  padding: 1rem;
+  font-weight: bolder;
+  color: white;
+  box-shadow: -4px 4px 5px rgb(0, 0, 0, 0.25);
+
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.items {
+  margin-top: 1rem;
+
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  grid-template-areas:
+    "clear clean divide multi"
+    "no7 no8 no9 add"
+    "no4 no5 no6 substract"
+    "no1 no2 no3 ans"
+    "dot no0 no0 ans";
+}
+
+.items > button {
+  color: white;
+  cursor: pointer;
+  min-height: 70px;
+  box-shadow: -4px 4px 5px rgb(0, 0, 0, 0.25);
+  font-size: 1.5rem;
+  font-weight: bolder;
+  background: rgba(209, 195, 195, 0.712);
+  border-radius: 3px;
+  border: none;
+}
+
+.items > button:hover {
+  background: #000;
+}
+
+.clear {
+  grid-area: clear;
+}
+.clean {
+  grid-area: clean;
+}
+.divide {
+  grid-area: divide;
+}
+.multi {
+  grid-area: multi;
+}
+.add {
+  grid-area: add;
+}
+.substract {
+  grid-area: substract;
+}
+.no-7 {
+  grid-area: no7;
+}
+.no-8 {
+  grid-area: no8;
+}
+.no-9 {
+  grid-area: no9;
+}
+.no-4 {
+  grid-area: no4;
+}
+.no-5 {
+  grid-area: no5;
+}
+.no-6 {
+  grid-area: no6;
+}
+.no-1 {
+  grid-area: no1;
+}
+.no-2 {
+  grid-area: no2;
+}
+.no-3 {
+  grid-area: no3;
+}
+.no-0 {
+  grid-area: no0;
+}
+.dot {
+  grid-area: dot;
+}
+.ans {
+  grid-area: ans;
+}
+
+.prank {
+  animation: shake 0.3s ease-in;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(10px);
+  }
+
+  50% {
+    transform: translate(-10px);
+  }
+
+  75% {
+    transform: translate(10px);
+  }
+
+  100% {
+    transform: translate(-10px);
+  }
+}
